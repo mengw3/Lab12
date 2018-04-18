@@ -3,6 +3,9 @@ package edu.illinois.cs.cs125.lab12;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -23,7 +26,8 @@ public final class MainActivity extends AppCompatActivity {
 
     /** Request queue for our API requests. */
     private static RequestQueue requestQueue;
-
+    Button qwe=(Button)findViewById(R.id.get_weather);
+    TextView tv = (TextView)findViewById((R.id.text));
     /**
      * Run when this activity comes to the foreground.
      *
@@ -37,7 +41,12 @@ public final class MainActivity extends AppCompatActivity {
         requestQueue = Volley.newRequestQueue(this);
 
         setContentView(R.layout.activity_main);
+        qwe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+            }
+        });
         startAPICall();
     }
 
